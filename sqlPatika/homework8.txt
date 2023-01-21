@@ -1,0 +1,60 @@
+create table employee(
+id serial primary key,
+	name varchar(50),
+	birthday varchar(50),
+	email varchar(100)
+)
+
+update employee
+set 
+name='y',
+birthday ='2021-06-03',
+email='y@gmail.com'
+where name='Zaria'
+
+update employee
+set 
+name='z',
+birthday ='2020-06-03',
+email='z@gmail.com'
+where name='Oralla'
+
+update employee
+set 
+name='z',
+birthday ='202-06-03',
+email='z@gmail.com'
+where email='egaukrodge2@sohu.com'
+
+update employee
+set 
+name='a',
+birthday ='2022-12-03',
+email='a@gmail.com'
+where birthday='2022-10-03'
+
+update employee
+set 
+name='a',
+birthday ='2022-12-03',
+email='a@gmail.com'
+where birthday='2022-10-03'
+
+
+
+delete from employee
+where name='Me'
+
+delete from employee
+where email='a@gmail.com'
+
+delete from employee
+where birthday='2023-01-08'
+
+
+delete from employee
+where id=3
+
+delete from employee
+where id=5
+

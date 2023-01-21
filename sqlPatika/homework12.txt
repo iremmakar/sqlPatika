@@ -1,0 +1,32 @@
+select count(*)
+from film 
+where length>(
+select avg(length)
+	from film
+)
+
+select count(*)
+from film 
+where rental_rate=(
+select max(rental_rate)
+	from film
+)
+
+select title
+from film 
+where rental_rate=(
+	select min(rental_rate)
+	from film
+) 
+or 
+replacement_cost=(
+	select min(replacement_cost)
+	from film
+)
+
+select count(*),payment.customer_id,customer.first_name,customer.last_name from
+payment 
+join customer on customer.customer_id=payment.customer_id
+group by payment.customer_id,customer.first_name,customer.last_name
+order by count(*) desc
+limit 1

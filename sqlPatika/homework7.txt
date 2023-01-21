@@ -1,0 +1,16 @@
+select rating
+from film 
+group by rating
+
+select replacement_cost,count(*)
+from film 
+group by replacement_cost 
+having count(*)>50;
+
+select store_id,count(*) from customer
+group by store_id
+
+select max(city_number)
+from (select country_id,count(*) as city_number
+from city
+group by country_id) as table2
